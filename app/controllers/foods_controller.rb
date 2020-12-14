@@ -1,7 +1,7 @@
 class FoodsController < ApplicationController
   def index
-    results = FoodFacade.food_query(params[:food_search])
-    @query = results[:query]
+    @query = params[:food_search]
+    results = FoodFacade.food_query(@query)
     @total_hits = results[:total_hits]
     @foods = results[:food_poros]
   end

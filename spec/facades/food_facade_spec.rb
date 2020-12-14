@@ -9,9 +9,6 @@ describe 'food facade' do
     expect(facade).to have_key(:total_hits)
     expect(facade[:total_hits]).to be_an(Integer)
 
-    expect(facade).to have_key(:query)
-    expect(facade[:query]).to be_a(String)
-
     expect(facade).to have_key(:food_poros)
     expect(facade[:food_poros]).to be_an(Array)
     expect(facade[:food_poros][0]).to be_a(FoodPoro)

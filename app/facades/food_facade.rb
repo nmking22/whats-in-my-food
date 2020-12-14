@@ -6,7 +6,6 @@ class FoodFacade
     end
     food_hash = {
       total_hits: foods_data[:totalHits],
-      query: foods_data[:foodSearchCriteria][:query],
       food_poros: poros
     }
   end
