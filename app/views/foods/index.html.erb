@@ -1,1 +1,12 @@
-<h1>Food</h1>
+<h1>Items containing '<%= @foods[:foodSearchCriteria][:query] %>'</h1>
+
+<h3>Total Results: <%= @foods[:totalHits] %></h3>
+
+<% @foods[:foods][0..9].each_with_index do |food, index| %>
+  <section id=<%= "foods-#{index}" %>>
+    <h3>GTIN/UPC Code: <%= food[:gtinUpc] %></h3>
+    <p>Description: <%= food[:description] %></p>
+    <p>Brand Owner: <%= food[:brandOwner] %></p>
+    <p>Ingredients: <%= food[:ingredients] %></p>
+  </section>
+<% end %>
