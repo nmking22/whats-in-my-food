@@ -4,8 +4,9 @@ describe 'welcome index page' do
   it 'form directs to foods index' do
     visit '/'
 
-    save_and_open_page
+    fill_in :q, with: 'sweet potatoes'
+    click_button 'Search'
 
-    expect(page).to have_content 'Search'
+    expect(current_path).to eq('/foods')
   end
 end
